@@ -5,12 +5,11 @@
 
 This repository contains the MicroPython implementation of a Real-Time Operating System (RTOS) based Smart Climate Control System. The project simulates a multi-tasking environment on an ESP32-S3 (YoloUNO) microcontroller, utilizing a producer-consumer architecture managed by asynchronous semaphores.
 
-## 🚀 Live Simulation
+##  Live Simulation
 You can view and run the fully wired 3D simulation of this project here:  
-**[Insert your OhStem Share Link Here]**
 
-## 📸 System Overview
-*[Drag and drop one of your best screenshots from the OhStem simulation here! GitHub will automatically upload it and turn it into an image link.]*
+
+##  System Overview
 
 ## 🛠️ Hardware Setup (Simulated)
 * **Microcontroller:** YoloUNO (ESP32-S3)
@@ -19,7 +18,7 @@ You can view and run the fully wired 3D simulation of this project here:
 * **Display:** LCD 1602 via I2C
 * **Status:** Onboard LED (Pin 13)
 
-## 🧠 Task Architecture
+##  Task Architecture
 The system utilizes concurrent task scheduling to decouple sensor polling from long-running actuator state machines. 
 * **`Task_ReadSensor` (Producer):** Polls the DHT20 every 5 seconds and releases execution tokens (Semaphores) when environmental thresholds are breached.
 * **`Task_Heater` (Consumer):** Updates LED color based on safe (Green), warning (Orange), and critical (Red) temperature zones.
@@ -27,8 +26,8 @@ The system utilizes concurrent task scheduling to decouple sensor polling from l
 * **`Task_Humidifier` (Consumer):** Executes a non-blocking 10-second multi-stage sequence (Green -> Yellow -> Red) when humidity drops below 40%.
 * **`Task_Blinky`:** Independent 1-second system heartbeat.
 
-## 👥 The Team
-* **Will ([Your ID])** - Lead Developer: System Architecture & RTOS Logic
-* **[Name] ([ID])** - Hardware Mapping & Circuit Setup
-* **[Name] ([ID])** - State Machine Design & Code Implementation
-* **[Name] ([ID])** - Testing Validation & Report Documentation
+## The Team
+* **Nguyen Minh Triet (10423180)** - Lead Developer: System Architecture & RTOS Logic
+* * **Nguyen Minh Triet (10423180)** - Hardware Mapping & Circuit Setup
+* **Tran Quyen Anh (10423189)** - State Machine Design & Code Implementation
+* **Tran Quyen Anh (10423189)** - Testing Validation & Report Documentation
